@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Domux AI - Progettista AI</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2EC4B6" />
+    <meta name="msapplication-TileColor" content="#0D2C54" />
+
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Domux AI" />
+    <link rel="apple-touch-icon" href="/icon-180x180.png" />
+    <link rel="apple-touch-startup-image" href="/icon-512x512.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configure Tailwind with custom brand colors
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-dark': '#0D2C54',
+              'brand-cyan': '#2EC4B6',
+            },
+            animation: {
+               'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Mini CSS Reset for consistency and fixing layout issues */
+      html {
+        box-sizing: border-box;
+        -webkit-text-size-adjust: 100%; /* Prevents iOS font scaling */
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f5; /* bg-zinc-100 from Tailwind */
+      }
+      img, svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      /* Loading indicator style */
+      #root:empty::before {
+        content: "Caricamento...";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #6b7280; /* text-zinc-500 from Tailwind */
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+        "@firebase/app": "https://aistudiocdn.com/@firebase/app@^0.14.4",
+        "@firebase/auth": "https://aistudiocdn.com/@firebase/auth@^1.11.0",
+        "@firebase/firestore": "https://aistudiocdn.com/@firebase/firestore@^4.9.2",
+        "@firebase/storage": "https://aistudiocdn.com/@firebase/storage@^0.14.0",
+        "jspdf": "https://aistudiocdn.com/jspdf@^3.0.3",
+        "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^5.0.2"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <noscript>Devi abilitare JavaScript per usare questa applicazione.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('✅ Service Worker registrato con successo:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('❌ Registrazione Service Worker fallita:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

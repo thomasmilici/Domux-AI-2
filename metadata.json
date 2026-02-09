@@ -1,0 +1,8 @@
+{
+  "name": "Progettista AI",
+  "description": "Un'applicazione AI per creare computi metrici per l'edilizia basati sul prezzario della Regione Lombardia 2025. Inserisci una descrizione dei lavori e ottieni un preventivo dettagliato che puoi scaricare in PDF.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
