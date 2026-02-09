@@ -1,4 +1,5 @@
 {
+{
   "hosting": {
     "public": "dist",
     "ignore": [
@@ -77,4 +78,23 @@
       }
     ]
   }
+}
+  "hosting": [
+    {
+      "target": "domuxai-backup",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+>>>>>>> e4e8b7b (Aggiungi file progetto)
 }

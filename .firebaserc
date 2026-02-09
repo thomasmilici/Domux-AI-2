@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "progettista-ai"
+<<<<<<< HEAD
+=======
+  },
+  "targets": {
+    "progettista-ai": {
+      "hosting": {
+        "domuxai-backup": [
+          "domuxai-backup"
+        ]
+      }
+    }
+>>>>>>> e4e8b7b (Aggiungi file progetto)
   }
 }
