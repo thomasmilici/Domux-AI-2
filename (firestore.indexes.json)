@@ -1,0 +1,112 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "prezziari_metadata",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "stato",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "anno",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "DESCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "prezziario_voci",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "liv6",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv9",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "prezziario_voci",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "prezziarioId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv1",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv2",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "prezziario_voci",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "prezziarioId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv6",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv9",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liv10",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "projects",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "DESCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    }
+  ],
+  "fieldOverrides": []
+}
